@@ -1,229 +1,132 @@
 <p align="center">
-<img src="/assets/logo.png" alt="Meowney Logo" width="200" height="200" /><br>
+  <img src="/assets/logo.png" alt="Meowney Logo" width="220" />
 </p>
 
-<h1 align="center">Meowney</h1><br>
+<h1 align="center">Meowney</h1>
 
 <p align="center">
-<a href="https://github.com/Alinshan/Meowney/actions/workflows/release.yml"><img src="https://github.com/Alinshan/Meowney/actions/workflows/release.yml/badge.svg" alt="Release"></a>&nbsp;<a href="https://github.com/Alinshan/Meowney/releases"><img alt="GitHub Release" src="https://img.shields.io/github/v/release/Alinshan/Meowney"></a>&nbsp;<a href="https://hub.docker.com/r/Alinshan/Meowney"><img alt="Docker Pulls" src="https://img.shields.io/docker/pulls/Alinshan/Meowney"></a>
+  <strong>The Purr-fectly Simple Expense Tracker for Your Home Lab.</strong>
 </p>
 
 <p align="center">
-<a href="#why-create-this">Why Create This?</a>&nbsp;&bull;&nbsp;<a href="#features">Features</a>&nbsp;&bull;&nbsp;<a href="#screenshots">Screenshots</a><br><a href="#installation">Installation</a>&nbsp;&bull;&nbsp;<a href="#usage">Usage</a>&nbsp;&bull;&nbsp;<a href="#contributing">Contributing</a>
+  <a href="https://github.com/Alinshan/Meowney/actions/workflows/release.yml"><img src="https://github.com/Alinshan/Meowney/actions/workflows/release.yml/badge.svg" alt="Release Status"></a>
+  <a href="https://github.com/Alinshan/Meowney/releases"><img alt="GitHub Release" src="https://img.shields.io/github/v/release/Alinshan/Meowney?color=7e57c2"></a>
+  <a href="https://hub.docker.com/r/Alinshan/Meowney"><img alt="Docker Pulls" src="https://img.shields.io/docker/pulls/Alinshan/Meowney?color=ffb74d"></a>
+  <img alt="License" src="https://img.shields.io/badge/license-MIT-blue.svg">
 </p>
 
-<br>
+---
 
-<p align="center">
-<b>Meowney</b> is an extremely simple self-hosted expense tracking system with a modern monthly pie-chart visualization and cashflow showcase.
-</p>
+## 🐱 What is Meowney?
 
-<br>
+**Meowney** is a minimalist, self-hosted expense tracking system designed for speed and simplicity. While other tools focus on complex budgeting and multi-account management, Meowney stays focused on one thing: **showing you where your money goes every month with zero friction.**
 
-# Why Create This?
+Built with a "dead simple" philosophy, it provides a beautiful, cat-themed interface that gives you an instant snapshot of your financial cashflow and category breakdowns.
 
-There are a ton of amazing projects for expense tracking across GitHub ([Actual](https://github.com/actualbudget/actual), [Firefly III](https://github.com/firefly-iii/firefly-iii), etc.). They're all incredible! I just don't find them *fast* and *simple*. They offer too many features I never use (like accounts or complex budgeting). *Don't get me wrong!* They're amazing when complexity is needed, but I wanted something ***dead simple*** that gives me a quick monthly look at my expenses. NOTHING else!
+---
 
-So, I created this project and I use it in my home lab for expenses. The primary intention is to track spending across your categories in a simplistic manner. No complications, searching, budgeting. This is *not* a budgeting app; it's for tracking.
+## ✨ Key Features
 
-# Features
+- 🚀 **Blazing Fast Entries** – Add expenses or income in seconds. Only date, amount, and category are required.
+- 📊 **Visual Dashboard** – Beautiful interactive pie charts and cashflow indicators.
+- 🔁 **Recurring Transactions** – Automate your fixed costs and steady income.
+- 🎨 **Dynamic Themes** – Gorgeous Light and Dark modes that respect your system settings.
+- 📱 **PWA Ready** – Install it as a native app on your iOS or Android device.
+- 🔒 **Privacy First** – 100% self-hosted. No trackers, no telemetry, no cloud dependencies.
+- 📂 **Flexible Backends** – Choose between lightweight JSON storage or a robust Postgres database.
+- 📥 **Easy Migration** – Import and export your data via CSV effortlessly.
 
-### Core Functionality
+---
 
-- Quick expense/income add (only date, amount, and category are required)
-- Single-user focused (mainly for a home lab deployment)
-- Recurring transactions for both income and expenses
-- Custom categories, currency symbols, and start date via app settings
-- Optional tags for further classification
-- Beautiful interface with both light and dark themes
-- Self-contained binary and container image to ensure no internet interaction
-- Multi-architecture Docker container with support for persistent storage
-- PWA support for using the app on smartphone
+## 🛠️ Tech Stack
 
-### Visualization
+Meowney is built using a modern, efficient stack designed for easy self-hosting:
 
-1. Main dashboard - category breakdown (pie chart) and cashflow indicator
-    - Click on a category to exclude it from the pie chart; click again to add it back
-    - Visualize the month's breakdown without considering some categories like Rent
-    - Cashflow shows total income, total expenses, and balance (red or green based on +ve or -ve)
-2. Table view for detailed expense listing
-    - View monthly or all expenses chronologically and delete them (hold shift to skip confirm)
-    - Use the browser to search for a name or tags if needed
-    - Tags show up if at least one transaction uses it; 
-3. Settings page for configurations and additional features
-    - Reorder, add, or remove custom categories
-    - Select a custom currency symbol and a custom start date
-    - Exporting data as CSV and import CSV from virtually anywhere
+- **Backend:** [Go](https://go.dev/) (High-performance, single binary)
+- **Frontend:** Vanilla JS, HTML5, CSS3 (No heavy frameworks)
+- **Visualization:** [Chart.js](https://www.chartjs.org/)
+- **Deployment:** Docker & Kubernetes support
 
-### Progressive Web App (PWA)
+---
 
-The front end of Meowney can be installed as a Progressive Web App on desktop and mobile devices (i.e., the back end still needs to be self-hosted). To install:
+## 🚀 Quick Start
 
-- Desktop: Click the install icon in your browser's address bar
-- iOS: Use Safari's "Add to Home Screen" option in the share menu
-- Android: Use Chrome's "Install" option in the menu
+The fastest way to get Meowney running is via Docker.
 
-# Screenshots
-
-Dashboard Showcase:
-
-| | Desktop View | Mobile View |
-| --- | --- | --- |
-| Dark | <img src="/assets/ddark-main.png" alt="Dashboard Dark" /> | <img src="/assets/mdark-main.png" alt="Mobile Dashboard Dark" /> |
-| Light | <img src="/assets/dlight-main.png" alt="Dashboard Light" /> | <img src="/assets/mlight-main.png" alt="Mobile Dashboard Light" /> |
-
-<details>
-<summary>Expand this to see screenshots of other pages</summary>
-
-| | Desktop View | Mobile View |
-| --- | --- | --- |
-| Table Dark | <img src="/assets/ddark-table.png" alt="Dashboard Dark" /> | <img src="/assets/mdark-table.png" alt="Mobile Dashboard Dark" /> |
-| Table Light | <img src="/assets/dlight-table.png" alt="Dashboard Light" /> | <img src="/assets/mlight-table.png" alt="Mobile Dashboard Light" /> |
-| Settings Dark | <img src="/assets/ddark-settings.png" alt="Table Dark" /> | <img src="/assets/mdark-settings.png" alt="Mobile Table Dark" /> |
-| Settings Light | <img src="/assets/dlight-settings.png" alt="Table Light" /> | <img src="/assets/mlight-settings.png" alt="Mobile Table Light" /> |
-
-</details>
-
-# Installation
-
-The recommended installation method is Docker. To run the container via CLI, use the following command:
-
+### Using Docker CLI
 ```bash
-docker run --rm -d \
-  --name Meowney \
+docker run -d \
+  --name meowney \
   -p 8080:8080 \
-  -v Meowney:/app/data \
+  -v meowney_data:/app/data \
   Alinshan/Meowney:main
 ```
 
-To use Docker compose, use this YAML definition:
-
+### Using Docker Compose
 ```yaml
 services:
-  Meowney:
+  meowney:
     image: Alinshan/Meowney:main
+    container_name: meowney
     restart: unless-stopped
     ports:
-      - 5006:8080 # change 5006 to what you want to expose on
+      - "8080:8080"
     volumes:
-      - /home/Alinshan/Meowney:/app/data # change dir as needed
+      - ./data:/app/data
 ```
 
-<details>
-<summary>Expand this to see additional execution options</summary>
-
-### Using the Binary or Building from Source
-
-Download the appropriate binary from the project releases. The binary automatically sets up a `data` directory in your CWD, and starts the app at `http://localhost:8080`.
-
-To build the binary yourself:
-
-```bash
-git clone https://github.com/Alinshan/Meowney.git && \
-cd Meowney && \
-go build ./cmd/Meowney
-```
-
-### Kubernetes Deployment
-
-This is a community-contributed Kubernetes spec. Treat it as a sample and review before deploying to your cluster. Read the [associated readme](./kubernetes/README.md) for more information.
-
-</details>
-
-# Usage
-
-Once deployed, use the web interface to do everything. Access it through your browser:
-
-- Dashboard: `http://localhost:8080/`
-- Table View: `http://localhost:8080/table`
-- Settings: `http://localhost:8080/settings`
-
-> [!NOTE]
-> This app does not include authentication, so deploy carefully. I don't want to add half-baked authentication, so use Authelia, or equivalent as needed. Meowney works well with a reverse proxy like Nginx Proxy Manager too and is intended for homelab use only.
-
-### Conventions
-
-Since writing the app, I've found a ton of ways applications handle expenses. Release v4.0 solidifies the conventions I will continue to maintain the app in.
-
-- Expenses are categorized by a -ve value, while income or reimbursement (designated by the `Report as gain` checkbox) are +ve
-- Expense dates are stored as UTC strings in RFC3339 format, however, the frontend hides the time value from the user; users are meant to select a date, and the current local time is automatically added to the given date
-- Future and recurring expenses extending into future dates are added immediately to the backend
-- The primary way to use Meowney is to quick review the month's stats via the pie chart - this allows users to make a mental note and soft decision of where to spend money, without the effort of maintaining a budget
-- Categories are meant to be used as a classification criteria - example, how much did I spend on food, groceries, and utilities, etc.
-- Tags are optional and are meant to assign features and characteristics to expenses.
-
-> [!NOTE]
-> While these conventions can change during the project's lifecycle, largely, the intention (stemming from the motivation to build Meowney) behind simple, manual, easy tracking will not change.
-
-### Configuration Options
-
-With the exception of [Data backends](#data-backends), all configuration of Meowney happens via the application UI. The list of all such options available via the settings page (`/settings` endpoint) is as follows:
-
-- Category Settings:
-- Currency Symbol:
-  - This is a frontend symbol configuration on what symbol to use to show amount values
-  - Each currency has its default behavior for using `,` or `.` as separators (and if it uses decimals or not)
-- Start Date:
-  - This is a custom day of the month from when the expenses will be displayed
-  - Example: setting it to 5 means, expenses for each month will be counted from 5th to next month's 4th
-- Recurring Transactions:
-  - A recurring transaction can be for an expense or an income (gain)
-  - Given a value for number of occurences and a start date, the app will add the transactions accordingly
-  - Recurring transactions will be listed at the bottom of the page and can be edited/removed (all or future only transactions)
-  - Recurring transactions allow similar options as normal expenses - category, tags, amount, name
-- Theme Settings: supports light and dark theme, with default behavior to adapt to system
-- Import/Export Data: covered under [Data Import/Export](#data-importexport)
-
-### Data Backends
-
-Meowney supports two data backends - JSON (default), and Postgres. Postgres was added with v4.0 of the app primarily for homelabbers to reuse their Postgres instances as needed for better backup compatibility.
-
-Ideally, you need not configure anything differently for the JSON backend. Meowney automatically creates the data directory and the `.json` files. You may, however, want to mount a specific volume to `/app/data` within the container for persistence.
-
-For configuring Postgres, use the following environment variables:
-
-| Variable | Sample Value | Details |
-| --- | --- | --- |
-| STORAGE_TYPE | postgres | defaults to `json`, hence JSON backend is default |
-| STORAGE_URL | "localhost:5432/Meowneydb" | format - SERVER/DB - the sslmode value is set by the next variable |
-| STORAGE_SSL | require | can be one of `disable` (default), `verify-full`, `verify-ca`, or `require` |
-| STORAGE_USER | testuser | the user to authenticate with your Postgres instance |
-| STORAGE_PASS | testpassword | the password for the Postgres user |
-
-The app has been tested with SSL mode for Postgres set to disable for simplicity.
-
-> [!TIP]
-> The environment variables can be set for using `-e` in the command line or `environment` in a compose stack.
-
-> [!TIP]
-> Having learnt more Go, I introduced the Storage interface in v4.0, making it easy to add any storage backend by simply implementing the interface.
-
-### Data Import/Export
-
-Meowney is meant to make things simple, and importing CSV abides by the same philosophy. Meowney will accept any CSV file as long as it contains the columns - `name`, `category`, `amount`, and `date`. This is case-insensitive so `name` or `Name` doesn't matter.
-
-> [!TIP]
-> This feature allows Meowney to use exported data from any tool as long as the required categories are present, making it insanely easy to shift from any provider.
-
-> [!WARNING]
-> The recommended format for the date is RFC3339. Additionally, Meowney can ingest several other time formats, including a short, human written date like `2012/8/14` (14th August 2012).
-> HOWEVER !!!
-> Meowney only ingests date in YYYY-MM-DD (this order). Meowney does NOT deal with MM/DD or DD/MM. Full 4 digit year comes first, followed by month, and lastly the date.
-
-> [!NOTE]
-> Meowney goes through every row in the imported data, and will intelligently fail on rows that have invalid or absent data. There is a 10 millisecond delay per record to reduce disk/db overhead, so please allow appropriate time for ingestion (eg. ~10 seconds for 1000 records).
-
-Data exported as CSV will include expense IDs, so when importing the same CSV file, IDs will be maintained and skipped appropriately.
-
-An `Import from Meowney v3.2-` will be present for v4.X to allow pulling in data from past releases.
-
-# Maintained by Alinshan
-
-This project is maintained by **Alinshan**. It was built with the philosophy of extreme simplicity and self-hosting.
-
-# Contributing
-
-If you have suggestions or find bugs, please open an issue. Pull requests are welcome if they maintain the project's core philosophy of "dead simple" expense tracking.
+Once running, visit `http://localhost:8080` and start tracking!
 
 ---
-Created and Maintained by Alinshan
+
+## 📸 Screenshots
+
+| Dashboard (Dark Mode) | Dashboard (Light Mode) |
+| :---: | :---: |
+| <img src="/assets/ddark-main.png" width="400" /> | <img src="/assets/dlight-main.png" width="400" /> |
+
+| Table View | Settings |
+| :---: | :---: |
+| <img src="/assets/ddark-table.png" width="400" /> | <img src="/assets/ddark-settings.png" width="400" /> |
+
+---
+
+## ⚙️ Configuration
+
+Meowney is designed to be configured directly through the UI, but it also supports environment variables for advanced setups:
+
+| Variable | Description | Default |
+| --- | --- | --- |
+| `PORT` | The port the server listens on | `8080` |
+| `STORAGE_TYPE` | Data backend (`json` or `postgres`) | `json` |
+| `STORAGE_URL` | Postgres connection string | `""` |
+| `STORAGE_USER` | Postgres username | `""` |
+| `STORAGE_PASS` | Postgres password | `""` |
+
+---
+
+## 🤝 Contributing
+
+Contributions are what make the open-source community such an amazing place. Any contributions you make are **greatly appreciated**.
+
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+---
+
+## 📜 License
+
+Distributed under the MIT License. See `LICENSE` for more information.
+
+## 👤 Author
+
+**Alinshan** - [GitHub](https://github.com/Alinshan)
+
+---
+
+<p align="center">
+  Developed with ❤️ by <b>Alinshan</b>
+</p>
