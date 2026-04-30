@@ -106,7 +106,7 @@ services:
     ports:
       - 5006:8080 # change 5006 to what you want to expose on
     volumes:
-      - /home/tanq/Meowney:/app/data # change dir as needed
+      - /home/Alinshan/Meowney:/app/data # change dir as needed
 ```
 
 <details>
@@ -217,11 +217,13 @@ Data exported as CSV will include expense IDs, so when importing the same CSV fi
 
 An `Import from Meowney v3.2-` will be present for v4.X to allow pulling in data from past releases.
 
+# Maintained by Alinshan
+
+This project is maintained by **Alinshan**. It was built with the philosophy of extreme simplicity and self-hosting.
+
 # Contributing
 
-Contributions are welcome; please ensure they align with the project's philosophy of maintaining simplicity by strictly using the current tech stack (Go for backend; HTML, CSS, JS for frontend). It is intended for home lab use, i.e., a self-hosted first approach (containerized use). Consider the following:
+If you have suggestions or find bugs, please open an issue. Pull requests are welcome if they maintain the project's core philosophy of "dead simple" expense tracking.
 
-- Additions should have sensible defaults without breaking foundations
-- Environment variables can be used for system configuration in container and binary
-- Found a typo or need to ask a question? Please open an issue instead of a PR
-- To add a new backend type (say SQL, NocoDB, etc.), a new file can be added in the backend that implements the Storage interface
+---
+Created and Maintained by Alinshan
