@@ -8,7 +8,6 @@
   <strong>The Purr-fectly Simple Expense Tracker for Your Home Lab.</strong>
 </p>
 
-
 ---
 
 ## 🐱 What is Meowney?
@@ -23,7 +22,7 @@ Built with a "dead simple" philosophy, it provides a beautiful, cat-themed inter
 
 - 🚀 **Blazing Fast Entries** – Add expenses or income in seconds. Only date, amount, and category are required.
 - 📊 **Visual Dashboard** – Beautiful interactive pie charts and cashflow indicators.
-- 🔁 **Recurring Transactions** – Automate your fixed costs and steady income.
+- 🔄 **Recurring Transactions** – Automate your fixed costs and steady income.
 - 🎨 **Dynamic Themes** – Gorgeous Light and Dark modes that respect your system settings.
 - 📱 **PWA Ready** – Install it as a native app on your iOS or Android device.
 - 🔒 **Privacy First** – 100% self-hosted. No trackers, no telemetry, no cloud dependencies.
@@ -89,7 +88,7 @@ Once running, visit `http://localhost:8080` and start tracking!
 
 ---
 
-## ⚙️ Configuration
+## âš™ï¸ Configuration
 
 Meowney is designed to be configured directly through the UI, but it also supports environment variables for advanced setups:
 
@@ -103,16 +102,16 @@ Meowney is designed to be configured directly through the UI, but it also suppor
 
 ---
 
-## 📜 License
+## ðŸ“œ License
 
 Distributed under the MIT License. See `LICENSE` for more information.
 
-## 👤 Author
+## ðŸ‘¤ Author
 
 **Alinshan** - [GitHub](https://github.com/Alinshan)
 
 ---
 
 <p align="center">
-  Developed with ❤️ by <b>Alinshan</b>
+  Developed with â¤ï¸ by <b>Alinshan</b>
 </p>
