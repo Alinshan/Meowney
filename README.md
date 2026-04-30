@@ -112,6 +112,3 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ---
 
-<p align="center">
-  Developed with â¤ï¸ by <b>Alinshan</b>
-</p>
