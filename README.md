@@ -40,26 +40,28 @@ Meowney is built using a modern, efficient stack designed for easy self-hosting:
 - **Visualization:** [Chart.js](https://www.chartjs.org/)
 - **Deployment:** Docker & Kubernetes support
 
----
+## 🚀 Easy Installation
 
-## 🚀 Quick Start
+Meowney is designed to be simple to set up, even if you aren't a developer.
 
-The fastest way to get Meowney running is via Docker.
+### 🐾 For Beginners (Using Docker)
+The easiest way to run Meowney is using [Docker Desktop](https://www.docker.com/products/docker-desktop/).
 
-### Using Docker CLI
-```bash
-docker run -d \
-  --name meowney \
-  -p 8080:8080 \
-  -v meowney_data:/app/data \
-  Alinshan/Meowney:main
-```
+1. **Install Docker Desktop** for your computer (Windows, Mac, or Linux).
+2. **Open your Terminal** (Command Prompt or PowerShell on Windows).
+3. **Run this command** to start Meowney:
+   ```bash
+   docker run -d -p 8080:8080 --name meowney -v meowney_data:/app/data alinshan/meowney:main
+   ```
+4. **Open your browser** and go to: `http://localhost:8080`
 
-### Using Docker Compose
+### 🏗️ Advanced Setup (Docker Compose)
+If you prefer using Docker Compose, create a `docker-compose.yml` file with this content:
+
 ```yaml
 services:
   meowney:
-    image: Alinshan/Meowney:main
+    image: alinshan/meowney:main
     container_name: meowney
     restart: unless-stopped
     ports:
@@ -67,8 +69,12 @@ services:
     volumes:
       - ./data:/app/data
 ```
+Then run `docker-compose up -d`.
 
-Once running, visit `http://localhost:8080` and start tracking!
+### 💻 Manual Run (For Go Users)
+If you have Go installed, you can run it directly:
+1. Clone the repo: `git clone https://github.com/Alinshan/Meowney.git`
+2. Run the app: `go run ./cmd/meowney`
 
 ---
 
