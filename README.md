@@ -8,6 +8,17 @@
   <strong>The Purr-fectly Simple Expense Tracker for Your Home Lab.</strong>
 </p>
 
+<p align="center">
+  <a href="https://github.com/Alinshan/Meowney/actions/workflows/release.yml"><img src="https://github.com/Alinshan/Meowney/actions/workflows/release.yml/badge.svg" alt="Release Status"></a>
+  <img alt="Version" src="https://img.shields.io/badge/version-meowney__v1.0-blue?style=flat&color=7e57c2">
+  <a href="https://hub.docker.com/r/Alinshan/Meowney"><img alt="Docker Pulls" src="https://img.shields.io/docker/pulls/Alinshan/Meowney?color=ffb74d"></a>
+  <img alt="License" src="https://img.shields.io/badge/license-MIT-blue.svg">
+</p>
+
+<p align="center">
+  <strong>Latest Release:</strong> <code>meowney_v1.0</code>
+</p>
+
 ---
 
 ## 🐱 What is Meowney?
