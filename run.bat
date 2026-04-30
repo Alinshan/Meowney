@@ -1,0 +1,3 @@
+@echo off
+echo Starting Meowney...
+go run ./cmd/meowney/main.go %*

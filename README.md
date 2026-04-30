@@ -44,20 +44,26 @@ Meowney is built using a modern, efficient stack designed for easy self-hosting:
 
 Meowney is designed to be simple to set up, even if you aren't a developer.
 
-### 🐾 For Beginners (Using Docker)
-The easiest way to run Meowney is using [Docker Desktop](https://www.docker.com/products/docker-desktop/).
+### 🐾 Quick Start (Terminal)
+The fastest way to run Meowney if you have [Go](https://go.dev/dl/) installed:
 
-1. **Install Docker Desktop** for your computer (Windows, Mac, or Linux).
-2. **Open your Terminal** (Command Prompt or PowerShell on Windows).
-3. **Run this command** to start Meowney:
+1. **Open your Terminal** (PowerShell or Command Prompt).
+2. **Run this command:**
    ```bash
-   docker run -d -p 8080:8080 --name meowney -v meowney_data:/app/data alinshan/meowney:main
+   go run ./cmd/meowney/main.go
    ```
-4. **Open your browser** and go to: `http://localhost:8080`
+3. **Open your browser** and go to: [http://localhost:8080](http://localhost:8080)
 
-### 🏗️ Advanced Setup (Docker Compose)
-If you prefer using Docker Compose, create a `docker-compose.yml` file with this content:
+---
 
+### 🐳 Using Docker
+If you prefer using Docker, you can run it with a single command:
+
+```bash
+docker run -d -p 8080:8080 --name meowney -v meowney_data:/app/data alinshan/meowney:main
+```
+
+Or use **Docker Compose**:
 ```yaml
 services:
   meowney:
@@ -69,12 +75,13 @@ services:
     volumes:
       - ./data:/app/data
 ```
-Then run `docker-compose up -d`.
 
-### 💻 Manual Run (For Go Users)
-If you have Go installed, you can run it directly:
-1. Clone the repo: `git clone https://github.com/Alinshan/Meowney.git`
-2. Run the app: `go run ./cmd/meowney`
+---
+
+### 💻 Advanced Options
+If you need to change the port or customize the run:
+* **Change Port:** `go run ./cmd/meowney/main.go --port 9090`
+* **Using Script:** `.\run.bat` (Windows) or `make run` (Linux/Mac)
 
 ---
 
