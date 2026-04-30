@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: Meowney
+  namespace: Meowney
+spec:
+  serviceName: Meowney-svc
+  selector:
+    matchLabels:
+      app: Meowney
+  replicas: 1 
+  template:
+    metadata:
+      labels:
+        app: Meowney
+    spec:
+      containers:
+      - name: Meowney
+        image: Alinshan/Meowney:main
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8080
+          name: Meowney-port
+        envFrom:
+        - configMapRef:
+            name: Meowney-config
+        volumeMounts:
+        - mountPath: "/app/data"
+          name: Meowney-vol
+      volumes:
+      - name: Meowney-vol
+        persistentVolumeClaim:
+          claimName: "Meowney-pvc"

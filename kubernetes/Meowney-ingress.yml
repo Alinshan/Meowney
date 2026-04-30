@@ -1,0 +1,19 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: Meowney-ingress
+  namespace: Meowney
+  labels:
+    name: Meowney
+spec:
+  rules:
+  - host: Meowney.localhost
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: Meowney-svc
+            port:
+              number: 8080
