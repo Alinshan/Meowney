@@ -10,9 +10,13 @@
 
 <p align="center">
   <a href="https://github.com/Alinshan/Meowney/actions/workflows/release.yml"><img src="https://github.com/Alinshan/Meowney/actions/workflows/release.yml/badge.svg" alt="Release Status"></a>
-  <a href="https://github.com/Alinshan/Meowney/releases"><img alt="GitHub Release" src="https://img.shields.io/github/v/release/Alinshan/Meowney?color=7e57c2"></a>
+  <img alt="Version" src="https://img.shields.io/badge/version-meowney__v1.0-blue?style=flat&color=7e57c2">
   <a href="https://hub.docker.com/r/Alinshan/Meowney"><img alt="Docker Pulls" src="https://img.shields.io/docker/pulls/Alinshan/Meowney?color=ffb74d"></a>
   <img alt="License" src="https://img.shields.io/badge/license-MIT-blue.svg">
+</p>
+
+<p align="center">
+  <strong>Latest Release:</strong> <code>meowney_v1.0</code>
 </p>
 
 ---
@@ -83,11 +87,15 @@ Once running, visit `http://localhost:8080` and start tracking!
 
 | Dashboard (Dark Mode) | Dashboard (Light Mode) |
 | :---: | :---: |
-| <img src="/assets/ddark-main.png" width="400" /> | <img src="/assets/dlight-main.png" width="400" /> |
+| <img src="assets/ddark-main.png" width="400" /> | <img src="assets/dlight-main.png" width="400" /> |
 
-| Table View | Settings |
+| Table View (Dark Mode) | Table View (Light Mode) |
 | :---: | :---: |
-| <img src="/assets/ddark-table.png" width="400" /> | <img src="/assets/ddark-settings.png" width="400" /> |
+| <img src="assets/ddark-table.png" width="400" /> | <img src="assets/dlight-table.png" width="400" /> |
+
+| Settings (Dark Mode) | Settings (Light Mode) |
+| :---: | :---: |
+| <img src="assets/ddark-settings.png" width="400" /> | <img src="assets/dlight-settings.png" width="400" /> |
 
 ---
 
