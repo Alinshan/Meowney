@@ -88,7 +88,7 @@ Once running, visit `http://localhost:8080` and start tracking!
 
 ---
 
-## âš™ï¸ Configuration
+## Configuration
 
 Meowney is designed to be configured directly through the UI, but it also supports environment variables for advanced setups:
 
@@ -102,11 +102,11 @@ Meowney is designed to be configured directly through the UI, but it also suppor
 
 ---
 
-## ðŸ“œ License
+## License
 
 Distributed under the MIT License. See `LICENSE` for more information.
 
-## ðŸ‘¤ Author
+## Author
 
 **Alinshan** - [GitHub](https://github.com/Alinshan)
 
