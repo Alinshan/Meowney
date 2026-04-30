@@ -5,7 +5,7 @@ WORKDIR /app
 COPY . .
 
 # Build the application
-RUN go build -o Meowney ./cmd/Meowney
+RUN go build -o Meowney ./cmd/meowney
 
 # Use a minimal alpine image for running
 FROM alpine:latest
