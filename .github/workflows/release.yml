@@ -108,5 +108,5 @@ jobs:
           platforms: linux/amd64,linux/arm64
           push: true
           tags: |
-            alinshan/Meowney:main
-            alinshan/Meowney:${{ needs.create-release.outputs.version }}
+            alinshan/meowney:main
+            alinshan/meowney:${{ needs.create-release.outputs.version }}
